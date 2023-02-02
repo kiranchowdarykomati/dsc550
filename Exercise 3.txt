@@ -1,0 +1,23 @@
+Download the labeled training dataset from this link: Bag of Words Meets Bags of Popcorn. 
+Part 1: Using the TextBlob Sentiment Analyzer
+Import the movie review data as a data frame and ensure that the data is loaded properly.
+How many of each positive and negative reviews are there?
+Use TextBlob to classify each movie review as positive or negative. Assume that a polarity score greater than or equal to zero is a positive sentiment and less than 0 is a negative sentiment.
+Check the accuracy of this model. Is this model better than random guessing?
+For up to five points extra credit, use another prebuilt text sentiment analyzer, e.g., VADER, and repeat steps (3) and (4).
+Part 2: Prepping Text for a Custom Model
+If you want to run your own model to classify text, it needs to be in proper form to do so. The following steps will outline a procedure to do this on the movie reviews text.
+Convert all text to lowercase letters.
+Remove punctuation and special characters from the text.
+Remove stop words.
+Apply NLTK’s PorterStemmer.
+Create a bag-of-words matrix from your stemmed text (output from (4)), where each row is a word-count vector for a single movie review (see sections 5.3 & 6.8 in the Machine Learning with Python Cookbook). Display the dimensions of your bag-of-words matrix. The number of rows in this matrix should be the same as the number of rows in your original data frame.
+Create a term frequency-inverse document frequency (tf-idf) matrix from your stemmed text, for your movie reviews (see section 6.9 in the Machine Learning with Python Cookbook). Display the dimensions of your tf-idf matrix. These dimensions should be the same as your bag-of-words matrix.
+Additional Comments
+The bag-of-words and tf-idf matrices are stored as sparse matrices because most entries are zero.
+Each row in the bag-of-words/tf-idf matrices corresponds to a movie review.
+The columns in the bag-of-words/tf-idf matrices correspond to unique words appearing in the movie reviews.
+Entries in the bag-of-words matrix are the number of times a word appears in a review.
+Entries in the tf-idf matrix are numbers representing the word importance in a review.
+The bag-of-words/tf-idf matrices are possible feature (input) matrices for model building.
+We will revisit this preprocessed text data to build a custom model in the future.

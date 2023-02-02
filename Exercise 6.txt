@@ -1,0 +1,33 @@
+Part 1: PCA and Variance Threshold in a Linear Regression
+Import the housing data as a data frame and ensure that the data is loaded properly.
+Drop the "Id" column and any features that are missing more than 40% of their values.
+For numerical columns, fill in any missing data with the median value.
+For categorical columns, fill in any missing data with the most common value (mode).
+Convert the categorical columns to dummy variables.
+Split the data into a training and test set, where the SalePrice column is the target.
+Run a linear regression and report the R2-value and RMSE on the test set.
+Fit and transform the training features with a PCA so that 90% of the variance is retained (see section 9.1 in the Machine Learning with Python Cookbook).
+How many features are in the PCA-transformed matrix?
+Transform but DO NOT fit the test features with the same PCA.
+Repeat step 7 with your PCA transformed data.
+Take your original training features (from step 6) and apply a min-max scaler to them.
+Find the min-max scaled features in your training set that have a variance above 0.1 (see Section 10.1 in the Machine Learning with Python Cookbook).
+Transform but DO NOT fit the test features with the same steps applied in steps 11 and 12.
+Repeat step 7 with the high variance data.
+Summarize your findings
+
+
+Part 2:
+
+Part 2: Categorical Feature Selection
+Download the data from this link Mushroom Classification. Based on several categorical features, you will predict whether or not a mushroom is edible or poisonous.
+Import the data as a data frame and ensure it is loaded correctly.
+Convert the categorical features (all of them) to dummy variables.
+Split the data into a training and test set.
+Fit a decision tree classifier on the training set.
+Report the accuracy and create a confusion matrix for the model prediction on the test set.
+Create a visualization of the decision tree.
+Use a χ2-statistic selector to pick the five best features for this data (see section 10.4 of the Machine Learning with Python Cookbook).
+Which five features were selected in step 7? Hint: Use the get_support function.
+Repeat steps 4 and 5 with the five best features selected in step 7.
+Summarize your findings.
